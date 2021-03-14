@@ -4,9 +4,10 @@ body {
 }
 
 
-.splash_Screen {
+.splash_screen {
         width: 980px;
         height: 579px;
+        background-size: cover;
         background-image: url("./Images/background_img.jpg");
         display: flex;
         justify-content: center;
@@ -14,11 +15,34 @@ body {
       }
       
 #play_btn {
-        background-color: rgb(0, 51, 128);
+        background-color: rgb(3, 172, 3);
         color: white;
+        font-size: 20px;
         padding: 0.25rem 0.5rem;
-        border: 1px solid rgb(0, 51, 128);
+        border: 1px solid rgb(3, 172, 3);
+        border-radius: 10px;
         text-transform: uppercase;
         height: 50px;
+        width: 160px;
+        margin-bottom: 20px;
       }
+
+/* #game_over {
+  display: none; 
+} */
+
+#start_btn {
+  background-color: rgb(3, 172, 3);
+  color: white;
+  font-size: 20px;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid rgb(3, 172, 3);
+  border-radius: 10px;
+  text-transform: uppercase;
+  height: 50px;
+  width: 160px;
 }
+
+
+
+

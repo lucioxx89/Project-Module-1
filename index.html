@@ -9,12 +9,21 @@
     <title> Race Car </title>
 </head>
 <body>
-    <div class="splash_Screen" >
-        <button id="play_btn">Start Game</button>
+    <div id="intro" class="splash_screen">
+        <button id="play_btn">Play Game</button>
     </div>
 
-    <div> Game Over </div>
-    
+
+   <div id="game" class="container hide"> 
+        <canvas id="RaceCar" width="600" height="1200"></canvas>
+        <button id="start_btn">start</button>
+      </div> 
+
+
+    <div id="game_over"> 
+        <h1>Game Over</h1>
+        <button id="playagain_btn">play again</button>
+    </div>
 
     <script src="src/main.js"></script>
     <script src="src/game.js"></script>
