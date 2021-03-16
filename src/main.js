@@ -1,12 +1,8 @@
 
 
-
-
 function printGameOver() {
     let gameOver = document.getElementById("game_over");
     let canvas = document.getElementById("race_car");
-    // canvas.style = "display: block";
-    // gameOver.style = "display: none";
     canvas.classList.add("hide");
     gameOver.classList.add("show");
     gameOver.classList.remove("hide");
@@ -23,7 +19,7 @@ function generateSplashScreen () {
 }
 
 
-//  work. by clicking the button i move to the second div game_screen
+//  work. by clicking the button it move to the second div game_screen
 
 const playButton = document.querySelector("#play_btn");
 playButton.addEventListener("click", () => {
@@ -42,13 +38,16 @@ const startButton = document.getElementById("start_btn");
 startButton.addEventListener("click", () => {
     let canvas = document.getElementById("race_car");
     const ctx = canvas.getContext("2d");
+    
     const raceGame = new Game (
         {
             ctx: ctx,
-            rows: canvas.width / 10,
-            columns: canvas.height / 10,
+            width: 600,
+            height: 700,
+            car: new Car (100, 100, ctx, 20, 20),
         },
     );
+    raceGame.start()
 })
 
 
