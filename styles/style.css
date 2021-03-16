@@ -12,9 +12,9 @@ body {
         display: flex;
         justify-content: center;
         align-items: flex-end;
-      }
+}
       
-#play_btn {
+#play_btn, #playagain_btn, #start_btn {
         background-color: rgb(3, 172, 3);
         color: white;
         font-size: 20px;
@@ -25,24 +25,16 @@ body {
         height: 50px;
         width: 160px;
         margin-bottom: 20px;
-      }
-
-/* #game_over {
-  display: none; 
-} */
-
-#start_btn {
-  background-color: rgb(3, 172, 3);
-  color: white;
-  font-size: 20px;
-  padding: 0.25rem 0.5rem;
-  border: 1px solid rgb(3, 172, 3);
-  border-radius: 10px;
-  text-transform: uppercase;
-  height: 50px;
-  width: 160px;
 }
 
+.show {
+        display: block;
+}
+
+.hide {
+  display: none;
+}
+      
 
 
 
