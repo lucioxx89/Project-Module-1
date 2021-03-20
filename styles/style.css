@@ -13,6 +13,14 @@ body {
         justify-content: center;
         align-items: flex-end;
 }
+
+#race_car {
+        border: 5px solid black;
+        background-image: url("./Images/road.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+}
       
 #play_btn, #playagain_btn, #start_btn {
         background-color: rgb(3, 172, 3);
