@@ -44,8 +44,8 @@ startButton.addEventListener("click", () => {
             ctx: ctx,
             width: 600,
             height: 700,
-            
-            car: new Car (300, 650, ctx, 20, 20) //add speedX value?
+        
+            car: new Car (300, 650, ctx, 20, 20, 10) //add speedX value?
         },
     );
     raceGame.start()

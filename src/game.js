@@ -27,6 +27,9 @@ class Game {
 
     start() {
         window.requestAnimationFrame(this.update.bind(this))
+        this.assignControlsToKeys();
+
+
     }
 
 
