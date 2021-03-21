@@ -1,17 +1,17 @@
-class Obstacle {
+class Cheese {
   constructor(ctx) {
     // inicializamos x
     this.ctx = ctx;
-    this.x = this.randomObstaclePositionX(); //150; // entre 0 y max width
+    this.x = this.randomCheesePositionX(); //150; // entre 0 y max width
     this.y = 0;
     this.width = 30;
     this.height = 30;
-    this.speedY = this.randomObstacleSpeed(); // no speed before
+    this.speedY = this.randomCheeseSpeed(); // no speed before
     this.speedX = 0;
     this.intervalId = undefined;
   }
 
-  moveObstacle() {
+  moveCheese() {
     this.y = this.y + this.speedY; //10
     if (this.y > 750) {
       this.y = this.y % 750;
@@ -21,19 +21,19 @@ class Obstacle {
   }
 
   start() {
-    this.intervalId = setInterval(this.moveObstacle.bind(this), 300);
+    this.intervalId = setInterval(this.moveCheese.bind(this), 300);
   }
 
-  drawObstacle() {
-    this.ctx.fillStyle = "red";
+  drawCheese() {
+    this.ctx.fillStyle = "yellow";
     this.ctx.fillRect(this.x, this.y, this.width, this.height);
   }
 
-  randomObstaclePositionX() {
+  randomCheesePositionX() {
     return Math.floor(Math.random() * (1170 - 10) + 10);
   }
 
-  randomObstacleSpeed() {
-    return Math.floor(Math.random() * (100 - 30) + 30);
+  randomCheeseSpeed() {
+    return Math.floor(Math.random() * (70 - 30) + 30);
   }
 }

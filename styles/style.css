@@ -5,10 +5,10 @@ body {
 
 
 .splash_screen {
-        width: 980px;
-        height: 579px;
+        width: auto;
+        height: 670px;
         background-size: cover;
-        background-image: url("./Images/background_img.jpg");
+        background-image: url("Images/splash-screen-background.png");
         display: flex;
         justify-content: center;
         align-items: flex-end;
@@ -16,9 +16,9 @@ body {
 
 #race_car {
         border: 5px solid black;
-        background-image: url("./Images/road.png");
+        background-image: url("Images/kitchen\ background.png");
         background-position: center;
-        background-size: contain;
+        background-size: auto;
         background-repeat: no-repeat;
 }
       
@@ -33,6 +33,7 @@ body {
         height: 50px;
         width: 160px;
         margin-bottom: 20px;
+        
         
 }
 

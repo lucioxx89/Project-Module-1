@@ -1,16 +1,48 @@
 class Game {
   constructor(options) {
     this.ctx = options.ctx;
-    this.car = options.car;
+    this.mouse = options.mouse;
     this.width = options.width;
     this.height = options.height;
 
-    this.obstacle = new Obstacle(options.ctx);
+    // this.obstacle = new Obstacle(options.ctx);
     this.obstacles = [
       new Obstacle(options.ctx),
       new Obstacle(options.ctx),
       new Obstacle(options.ctx),
+      new Obstacle(options.ctx),
+      new Obstacle(options.ctx),
     ];
+
+    this.cheese = [
+      new Cheese(options.ctx),
+      new Cheese(options.ctx),
+      new Cheese(options.ctx),
+    ];
+  }
+
+  drawAllCheese() {
+    this.cheese.forEach((cheese) => {
+      cheese.drawCheese();
+    });
+  }
+
+  drawAllObstacles() {
+    this.obstacles.forEach((obstacle) => {
+      obstacle.drawObstacle();
+    });
+  }
+
+  moveAllCheese() {
+    this.cheese.forEach((cheese) => {
+      cheese.start();
+    });
+  }
+
+  moveAllObstacles() {
+    this.obstacles.forEach((obst) => {
+      obst.start();
+    });
   }
 
   drawBackground() {
@@ -24,22 +56,30 @@ class Game {
 
   update() {
     this.clean();
-    this.car.draw();
 
-    // this.obstacle.draw();
-    this.obstacles.forEach((obs) => {
-      obs.draw();
-    });
+    this.mouse.draw();
+
+    this.drawAllObstacles();
+
+    this.drawAllCheese();
+
+    // this.moveAllObstacles();
+
+    // this.obstacle.drawObstacle();
 
     window.requestAnimationFrame(this.update.bind(this));
   }
 
   start() {
     this.assignControlsToKeys();
-    this.obstacle.start();
-    this.obstacles.forEach((obs) => {
-      obs.start();
-    });
+
+    this.moveAllObstacles();
+
+    this.moveAllCheese();
+
+    // this.obstacles.forEach((obs) => {
+    //   obs.start();
+    // });
     window.requestAnimationFrame(this.update.bind(this));
   }
 
@@ -48,13 +88,12 @@ class Game {
       switch (event.code) {
         case "ArrowLeft": //37: left
           console.log("left");
-          this.car.moveLeft();
+          this.mouse.moveLeft();
 
           break;
         case "ArrowRight": //39: right
           console.log("right");
-          this.car.moveRight();
-          // console.log("right");
+          this.mouse.moveRight();
           break;
         default:
           break;

@@ -34,10 +34,10 @@ startButton.addEventListener("click", () => {
 
   const raceGame = new Game({
     ctx: ctx,
-    width: 600,
-    height: 700,
+    width: 1200,
+    height: 750,
 
-    car: new Car(300, 650, ctx, 20, 20, 10), //add speedX value?
+    mouse: new Mouse(300, 720, ctx, 20, 20, 10), //add speedX value?
 
     obstacle: new Obstacle(ctx, 150, 0, 30, 30),
   });
