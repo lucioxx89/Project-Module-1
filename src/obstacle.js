@@ -36,4 +36,26 @@ class Obstacle {
   randomObstacleSpeed() {
     return Math.floor(Math.random() * (100 - 30) + 30);
   }
+
+  collisionWithMouse(mouse) {
+    return (
+      this.x < mouse.x + mouse.width &&
+      this.x + this.width > mouse.x &&
+      this.y < mouse.y + mouse.height &&
+      this.y + this.height > mouse.y
+    );
+  }
 }
+
+// this.x < bag.x + bag.width &&
+// this.x + this.width > bag.x &&
+// this.y < bag.y + bag.height &&
+// this.y + this.height > bag.y
+
+// collison() {
+//   if (this.mouse.x === this.obstacle.x + this.obstacle.width && this.mouse.x)
+// }
+// if (object1.x < object2.x + object2.width  && object1.x + object1.width  > object2.x &&
+//   object1.y < object2.y + object2.height && object1.y + object1.height > object2.y) {
+// // The objects are touching
+// }

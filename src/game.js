@@ -63,6 +63,16 @@ class Game {
 
     this.drawAllCheese();
 
+    this.obstacles.forEach((obs) => {
+      if (obs.collisionWithMouse(this.mouse)) {
+        printGameOver();
+      }
+    });
+
+    // this.randomObstacles.forEach((obstacle) => {
+    //   if (obstacle.collisionWithChihuahua(this.chihuahua)) {
+    //     console.log("collision with obstacle");
+
     // this.moveAllObstacles();
 
     // this.obstacle.drawObstacle();
