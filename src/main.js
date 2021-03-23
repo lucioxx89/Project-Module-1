@@ -1,6 +1,6 @@
 function printGameOver() {
   let gameOver = document.getElementById("game_over");
-  let canvas = document.getElementById("race_car");
+  let canvas = document.getElementById("game");
   canvas.classList.add("hide");
   gameOver.classList.add("show");
   gameOver.classList.remove("hide");
@@ -8,6 +8,8 @@ function printGameOver() {
 
 function generateSplashScreen() {
   let splash = document.getElementById("intro");
+  game_over.classList.remove("show");
+  game_over.classList.add("hide");
   splash.innerHTML = `
     <div>
         <button id="play_btn">Play Game</button>
@@ -31,6 +33,17 @@ const startButton = document.getElementById("start_btn");
 startButton.addEventListener("click", () => {
   let canvas = document.getElementById("race_car");
   const ctx = canvas.getContext("2d");
+
+  const PlayAgainButton = document.getElementById("playagain_btn");
+  PlayAgainButton.addEventListener("click", () => {
+    // game_over.classList.remove("show");
+    game_over.classList.add("hide");
+    const splash = document.getElementById("intro");
+    splash.classList.remove("hide");
+    splash.classList.add("show");
+    // intro.classList.remove("hide");
+    // intro.classList.add("show");
+  });
 
   const raceGame = new Game({
     ctx: ctx,

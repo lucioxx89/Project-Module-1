@@ -20,8 +20,15 @@ class Obstacle {
     }
   }
 
-  start() {
+  startMovingObstacle() {
     this.intervalId = setInterval(this.moveObstacle.bind(this), 300);
+  }
+
+  stopMovingObstacle() {
+    if ((this.intervalId = true)) {
+      clearInterval(this.intervalId);
+      console.log("stop obstacle");
+    }
   }
 
   drawObstacle() {

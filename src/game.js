@@ -35,13 +35,25 @@ class Game {
 
   moveAllCheese() {
     this.cheese.forEach((cheese) => {
-      cheese.start();
+      cheese.startMovingCheese();
+    });
+  }
+
+  stopMovingAllCheese() {
+    this.cheese.forEach((cheese) => {
+      cheese.stopMovingCheese();
     });
   }
 
   moveAllObstacles() {
     this.obstacles.forEach((obst) => {
-      obst.start();
+      obst.startMovingObstacle();
+    });
+  }
+
+  stopMovingAllObstacle() {
+    this.obstacles.forEach((obst) => {
+      obst.stopMovingObstacle();
     });
   }
 
@@ -65,7 +77,15 @@ class Game {
 
     this.obstacles.forEach((obs) => {
       if (obs.collisionWithMouse(this.mouse)) {
+        this.stopMovingAllCheese();
+        this.stopMovingAllObstacle();
         printGameOver();
+      }
+    });
+
+    this.cheese.forEach((cheese) => {
+      if (cheese.collisionWithMouse(this.mouse)) {
+        console.log("cheese");
       }
     });
 

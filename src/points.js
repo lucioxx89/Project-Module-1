@@ -1,6 +1,5 @@
 class Cheese {
   constructor(ctx) {
-    // inicializamos x
     this.ctx = ctx;
     this.x = this.randomCheesePositionX(); //150; // entre 0 y max width
     this.y = 0;
@@ -20,9 +19,19 @@ class Cheese {
     }
   }
 
-  start() {
+  startMovingCheese() {
     this.intervalId = setInterval(this.moveCheese.bind(this), 300);
   }
+
+  stopMovingCheese() {
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+      console.log("stop cheese");
+    }
+  }
+  // stop() {
+  //   this.intervalId = clearInterval(this.moveCheese);
+  // }
 
   drawCheese() {
     this.ctx.fillStyle = "yellow";
@@ -36,4 +45,13 @@ class Cheese {
   randomCheeseSpeed() {
     return Math.floor(Math.random() * (70 - 30) + 30);
   }
-}
+
+  collisionWithMouse(mouse) {
+    return (
+      this.x < mouse.x + mouse.width &&
+      this.x + this.width > mouse.x &&
+      this.y < mouse.y + mouse.height &&
+      this.y + this.height > mouse.y
+    );
+  }
+} //  cheese class
