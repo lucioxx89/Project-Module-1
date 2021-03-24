@@ -4,6 +4,7 @@ class Game {
     this.mouse = options.mouse;
     this.width = options.width;
     this.height = options.height;
+    this.cheeseCounter = 0; //options.cheeseCounter;
 
     // this.obstacle = new Obstacle(options.ctx);
     this.obstacles = [
@@ -66,6 +67,32 @@ class Game {
     this.ctx.clearRect(0, 0, this.width, this.height);
   }
 
+  counter() {
+    this.cheese.forEach((cheese) => {
+      if (cheese.collisionWithMouse(this.mouse)) {
+        this.cheeseCounter += 1;
+
+        console.log(this.cheeseCounter);
+      }
+    });
+  }
+
+  endGame() {
+    this.obstacles.forEach((obs) => {
+      if (obs.collisionWithMouse(this.mouse)) {
+        this.stopMovingAllCheese();
+        this.stopMovingAllObstacle();
+        printGameOver();
+      }
+    });
+  }
+
+  // counter() {
+  //   this.cheese.forEach((cheese) => {
+  //     this.cheese + 1;
+  //   });
+  // }
+
   update() {
     this.clean();
 
@@ -75,27 +102,30 @@ class Game {
 
     this.drawAllCheese();
 
-    this.obstacles.forEach((obs) => {
-      if (obs.collisionWithMouse(this.mouse)) {
-        this.stopMovingAllCheese();
-        this.stopMovingAllObstacle();
-        printGameOver();
-      }
-    });
+    // PUT IT INSIDE THE FUNCTION END GAME
 
-    this.cheese.forEach((cheese) => {
-      if (cheese.collisionWithMouse(this.mouse)) {
-        console.log("cheese");
-      }
-    });
+    // this.obstacles.forEach((obs) => {
+    //   if (obs.collisionWithMouse(this.mouse)) {
+    //     this.stopMovingAllCheese();
+    //     this.stopMovingAllObstacle();
+    //     printGameOver();
+    //   }
+    // });
 
-    // this.randomObstacles.forEach((obstacle) => {
-    //   if (obstacle.collisionWithChihuahua(this.chihuahua)) {
-    //     console.log("collision with obstacle");
+    this.counter();
+    document.getElementById("score").innerHTML = "Score: " + this.cheeseCounter;
 
-    // this.moveAllObstacles();
+    this.endGame();
 
-    // this.obstacle.drawObstacle();
+    //CHEESE COUNTER , I PUT IT INSIDE THE FUNCTION COUNTER
+
+    // this.cheese.forEach((cheese) => {
+    //   if (cheese.collisionWithMouse(this.mouse)) {
+    //     this.cheeseCounter += 1;
+
+    //     console.log(this.cheeseCounter);
+    //   }
+    // });
 
     window.requestAnimationFrame(this.update.bind(this));
   }

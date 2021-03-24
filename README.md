@@ -1,5 +1,6 @@
 # Project-Module-1
-# RACE GAME
+
+# MOUSE ESCAPE
 
 It's a **race game**, the purpose of the game is to collect as many as gasoline tank as possible. During the race there would be enemies (police) on the street which the player has to avoid. If the player will crash against them the game will be over. Point counter
 
@@ -19,11 +20,12 @@ It's a **race game**, the purpose of the game is to collect as many as gasoline 
 
 #### Game Screen
 
-- Canvas
-- Infinite Background scrolling down, speed increase over time
-- Car/Player
-- Gasoline tank
-- Enemies
+- Start Button
+- Canvas 2D
+- Fixed background
+- Mouse/Player
+- Cheese (to get more points)
+- Trap (if touched, gameover)
 
 #### Game Over Screen
 

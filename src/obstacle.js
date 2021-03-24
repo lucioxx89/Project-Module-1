@@ -54,11 +54,6 @@ class Obstacle {
   }
 }
 
-// this.x < bag.x + bag.width &&
-// this.x + this.width > bag.x &&
-// this.y < bag.y + bag.height &&
-// this.y + this.height > bag.y
-
 // collison() {
 //   if (this.mouse.x === this.obstacle.x + this.obstacle.width && this.mouse.x)
 // }

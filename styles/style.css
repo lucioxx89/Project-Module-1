@@ -21,6 +21,15 @@ body {
         background-size: auto;
         background-repeat: no-repeat;
 }
+
+#game_over {
+        width: auto;
+        height: 470px;
+        background-size: auto;
+        background-repeat: no-repeat;
+        background-image: url("Images/mouse\ trap\ gameOver.jpeg");
+       
+}
       
 #play_btn, #playagain_btn, #start_btn {
         background-color: rgb(3, 172, 3);
@@ -33,6 +42,8 @@ body {
         height: 50px;
         width: 160px;
         margin-bottom: 20px;
+        /* position: absolute; */
+        
         
         
 }

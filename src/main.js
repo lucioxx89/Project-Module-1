@@ -50,7 +50,7 @@ startButton.addEventListener("click", () => {
     width: 1200,
     height: 750,
 
-    mouse: new Mouse(300, 720, ctx, 20, 20, 10), //add speedX value?
+    mouse: new Mouse(300, 720, ctx, 40, 40, 10), //add speedX value?
 
     obstacle: new Obstacle(ctx, 150, 0, 30, 30),
   });
