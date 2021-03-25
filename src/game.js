@@ -13,9 +13,13 @@ class Game {
       new Obstacle(options.ctx),
       new Obstacle(options.ctx),
       new Obstacle(options.ctx),
+      new Obstacle(options.ctx),
+      new Obstacle(options.ctx),
     ];
 
     this.cheese = [
+      new Cheese(options.ctx),
+      new Cheese(options.ctx),
       new Cheese(options.ctx),
       new Cheese(options.ctx),
       new Cheese(options.ctx),

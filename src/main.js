@@ -31,7 +31,7 @@ playButton.addEventListener("click", () => {
 
 const startButton = document.getElementById("start_btn");
 startButton.addEventListener("click", () => {
-  let canvas = document.getElementById("race_car");
+  let canvas = document.getElementById("mouse_escape");
   const ctx = canvas.getContext("2d");
 
   const PlayAgainButton = document.getElementById("playagain_btn");
@@ -45,7 +45,7 @@ startButton.addEventListener("click", () => {
     // intro.classList.add("show");
   });
 
-  const raceGame = new Game({
+  const mouseGame = new Game({
     ctx: ctx,
     width: 1200,
     height: 750,
@@ -54,5 +54,5 @@ startButton.addEventListener("click", () => {
 
     obstacle: new Obstacle(ctx, 150, 0, 30, 30),
   });
-  raceGame.start();
+  mouseGame.start();
 });

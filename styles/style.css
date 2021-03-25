@@ -8,15 +8,15 @@ body {
         width: auto;
         height: 670px;
         background-size: cover;
-        background-image: url("Images/splash-screen-background.png");
+        background-image: url("Images/splashScreenBackground.png");
         display: flex;
         justify-content: center;
         align-items: flex-end;
 }
 
-#race_car {
+#mouse_escape {
         border: 5px solid black;
-        background-image: url("Images/kitchen\ background.png");
+        background-image: url("Images/kitchenBackground.png");
         background-position: center;
         background-size: auto;
         background-repeat: no-repeat;
@@ -27,7 +27,7 @@ body {
         height: 470px;
         background-size: auto;
         background-repeat: no-repeat;
-        background-image: url("Images/mouse\ trap\ gameOver.jpeg");
+        background-image: url("Images/mouseTrapGameOver.jpeg");
        
 }
       
@@ -65,7 +65,9 @@ body {
 
 #score {
         position: absolute;
-        margin-left: 1250px;
+        margin-left: 34px;
+        margin-top: 120px;
+        font-size: 28px;;
         
         
 
