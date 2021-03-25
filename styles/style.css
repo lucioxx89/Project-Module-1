@@ -31,7 +31,51 @@ body {
        
 }
       
-#play_btn, #playagain_btn, #start_btn {
+#play_btn {
+        background-color: rgb(3, 172, 3);
+        color: white;
+        font-size: 26px;
+        padding: 0.25rem 0.5rem;
+        border: 1px solid rgb(3, 172, 3);
+        border-radius: 10px;
+        text-transform: uppercase;
+        height: 100px;
+        width: 180px;
+        margin-bottom: 20px;
+        position: absolute;
+        top: 550px;
+        left: 600px;
+        
+}
+
+#start_btn {
+        background-color: rgb(3, 172, 3);
+        color: white;
+        font-size: 24px;
+        padding: 0.25rem 0.5rem;
+        border: 1px solid rgb(3, 172, 3);
+        border-radius: 10px;
+        text-transform: uppercase;
+        height: 80px;
+        width: 160px;
+        margin-bottom: 20px;
+        position: absolute;
+        margin-left: 32px;
+}
+
+#score {
+        position: absolute;
+        margin-left: 1250px;
+        
+        
+
+
+}
+        
+
+ 
+
+#playagain_btn{
         background-color: rgb(3, 172, 3);
         color: white;
         font-size: 20px;
@@ -42,11 +86,12 @@ body {
         height: 50px;
         width: 160px;
         margin-bottom: 20px;
-        /* position: absolute; */
-        
-        
-        
+        position: absolute;
+        top: 550px;
+
 }
+
+
 
 .show {
         display: block;

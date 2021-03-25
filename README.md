@@ -2,45 +2,46 @@
 
 # MOUSE ESCAPE
 
-It's a **race game**, the purpose of the game is to collect as many as gasoline tank as possible. During the race there would be enemies (police) on the street which the player has to avoid. If the player will crash against them the game will be over. Point counter
+It's a 2d game the purpose of the game is to collect as many cheese as possible. During the game there would be obstacle (mouse trap) falling down which the player has to avoid. If the player will crash against them the game will be over. Point counter will be display during the game.
 
 ## TECHNIQUE
 
 - HTML5
 - CSS
-- Javascript - Canvas
+- Javascript - Canvas(2d)
 
 ## **GAME SET UP**
 
 #### Start Screen
 
 - Splash screen
-- Title
+- Background image with title
 - Play Button
 
 #### Game Screen
 
+- Canvas 2D with with fixed kitchen background
 - Start Button
-- Canvas 2D
-- Fixed background
-- Mouse/Player
-- Cheese (to get more points)
-- Trap (if touched, gameover)
+- Player (mouse)
+- Cheese (points on collision)
+- Trap ( gameover on collision)
+- Score
 
 #### Game Over Screen
 
 - Play Again Button
-- Back to start screen
+- Bacground Picture
+- Final Score
 
 ## GAME
 
 - Create Interface
-- Create the Player
-- Add movement to the player:left &right
-- Create items that fall
-- Check collision\_
-  - if there is a collision with **Gasoline tank**, a counter increase by 1
-  - if there is a collision with the **enemy**, -> Game Over -> Back to Start Screen
+- Create the Class Player
+- Add horizontal movement to the player:left &right
+- Create items that fall (cheese and trap) => class cheese and class obstacles
+- Check for collision\_
+  - if there is a collision with **Cheese(yellow box)**, a counter increase is actual score
+  - if there is a collision with the **mouse trap(red box)**, -> Game Over -> Back to Start Screen
 
 ## DATA STRUCTURE
 

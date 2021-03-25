@@ -116,6 +116,8 @@ class Game {
     document.getElementById("score").innerHTML = "Score: " + this.cheeseCounter;
 
     this.endGame();
+    document.getElementById("final_score").innerHTML =
+      "Final score: " + this.cheeseCounter;
 
     //CHEESE COUNTER , I PUT IT INSIDE THE FUNCTION COUNTER
 
