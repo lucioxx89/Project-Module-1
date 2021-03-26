@@ -34,25 +34,38 @@ startButton.addEventListener("click", () => {
   let canvas = document.getElementById("mouse_escape");
   const ctx = canvas.getContext("2d");
 
-  const PlayAgainButton = document.getElementById("playagain_btn");
-  PlayAgainButton.addEventListener("click", () => {
-    // game_over.classList.remove("show");
-    game_over.classList.add("hide");
-    const splash = document.getElementById("intro");
-    splash.classList.remove("hide");
-    splash.classList.add("show");
-    // intro.classList.remove("hide");
-    // intro.classList.add("show");
-  });
+  // const PlayAgainButton = document.getElementById("playagain_btn");
+  // PlayAgainButton.addEventListener("click", () => {
+  //   game_over.classList.remove("show");
+  //   game_over.classList.add("hide");
+  //   const splash = document.getElementById("intro");
+  //   splash.classList.remove("hide");
+  //   splash.classList.add("show");
+  //   // intro.classList.remove("hide");
+  //   // intro.classList.add("show");
+  // });
 
   const mouseGame = new Game({
     ctx: ctx,
     width: 1200,
     height: 750,
 
-    mouse: new Mouse(300, 720, ctx, 40, 40, 10), //add speedX value?
+    mouse: new Mouse(300, 660, ctx, 100, 100, 10), //add speedX value?
 
     obstacle: new Obstacle(ctx, 150, 0, 30, 30),
   });
   mouseGame.start();
+});
+
+const playAgainButton = document.getElementById("playagain_btn");
+playAgainButton.addEventListener("click", () => {
+  game_over.classList.remove("show");
+  game_over.classList.add("hide");
+  const splash = document.getElementById("intro");
+  splash.classList.remove("hide");
+  splash.classList.add("show");
+  // game_over.classList.remove("show");
+  // game_over.classList.add("hide");
+  // intro.classList.remove("hide");
+  // intro.classList.add("show");
 });

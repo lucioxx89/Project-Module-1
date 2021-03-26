@@ -10,9 +10,12 @@ class Mouse {
 
   draw() {
     //draw mouse
+    const mouseImg = new Image();
+    mouseImg.src = "./styles/Images/mouse.png";
+    this.ctx.drawImage(mouseImg, this.x, this.y, this.width, this.height);
 
-    this.ctx.fillStyle = "grey";
-    this.ctx.fillRect(this.x, this.y, this.width, this.height, this.speedX);
+    // this.ctx.fillStyle = "grey";
+    // this.ctx.fillRect(this.x, this.y, this.width, this.height, this.speedX);
   }
 
   moveLeft() {

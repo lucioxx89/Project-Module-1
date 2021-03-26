@@ -4,8 +4,8 @@ class Obstacle {
     this.ctx = ctx;
     this.x = this.randomObstaclePositionX(); //150; // entre 0 y max width
     this.y = 0;
-    this.width = 30;
-    this.height = 30;
+    this.width = 50;
+    this.height = 50;
     this.speedY = this.randomObstacleSpeed(); // no speed before
     this.speedX = 0;
     this.intervalId = undefined;
@@ -25,15 +25,18 @@ class Obstacle {
   }
 
   stopMovingObstacle() {
-    if ((this.intervalId = true)) {
+    if (this.intervalId) {
       clearInterval(this.intervalId);
       console.log("stop obstacle");
     }
   }
 
   drawObstacle() {
-    this.ctx.fillStyle = "red";
-    this.ctx.fillRect(this.x, this.y, this.width, this.height);
+    const trapImg = new Image();
+    trapImg.src = "./styles/Images/mouseTrap.png";
+    this.ctx.drawImage(trapImg, this.x, this.y, this.width, this.height);
+    // this.ctx.fillStyle = "red";
+    // this.ctx.fillRect(this.x, this.y, this.width, this.height);
   }
 
   randomObstaclePositionX() {

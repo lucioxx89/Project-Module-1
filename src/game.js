@@ -87,6 +87,7 @@ class Game {
         this.stopMovingAllCheese();
         this.stopMovingAllObstacle();
         printGameOver();
+        this.clean();
       }
     });
   }

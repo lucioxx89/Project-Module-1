@@ -3,8 +3,8 @@ class Cheese {
     this.ctx = ctx;
     this.x = this.randomCheesePositionX(); //150; // entre 0 y max width
     this.y = 0;
-    this.width = 30;
-    this.height = 30;
+    this.width = 60;
+    this.height = 70;
     this.speedY = this.randomCheeseSpeed(); // no speed before
     this.speedX = 0;
     this.intervalId = undefined;
@@ -34,8 +34,12 @@ class Cheese {
   // }
 
   drawCheese() {
-    this.ctx.fillStyle = "yellow";
-    this.ctx.fillRect(this.x, this.y, this.width, this.height);
+    const cheeseImg = new Image();
+    cheeseImg.src = "./styles/Images/cheese.png";
+    this.ctx.drawImage(cheeseImg, this.x, this.y, this.width, this.height);
+
+    // this.ctx.fillStyle = "yellow";
+    // this.ctx.fillRect(this.x, this.y, this.width, this.height);
   }
 
   randomCheesePositionX() {
